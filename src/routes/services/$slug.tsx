@@ -18,7 +18,13 @@ function ServiceDetail() {
   const service = Route.useLoaderData();
   usePageMeta(service.title, service.short);
 
-  const otherServices = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const sameCategoryServices = SERVICES.filter(
+    (s) => s.category === service.category && s.slug !== service.slug,
+  );
+  const otherCategoryServices = SERVICES.filter(
+    (s) => s.category !== service.category && s.slug !== service.slug,
+  );
+  const otherServices = [...sameCategoryServices, ...otherCategoryServices].slice(0, 3);
 
   return (
     <>
@@ -30,18 +36,24 @@ function ServiceDetail() {
         />
         <div className="container-x relative">
           <Reveal>
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] text-muted-foreground uppercase transition-colors hover:text-foreground"
-            >
-              ← All Services
-            </Link>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] text-muted-foreground uppercase transition-colors hover:text-foreground"
+              >
+                ← All Services
+              </Link>
+              <span className="text-border">•</span>
+              <span className="inline-block border border-primary/30 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] tracking-wider text-primary uppercase">
+                {service.category}
+              </span>
+            </div>
           </Reveal>
           <Reveal delay={60}>
-            <Eyebrow>Service</Eyebrow>
+            <Eyebrow className="mt-4">Service Detail</Eyebrow>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="mt-6 max-w-3xl text-[clamp(2.4rem,6vw,4.5rem)] leading-[0.95] font-semibold">
+            <h1 className="mt-4 max-w-3xl text-[clamp(2.4rem,6vw,4.5rem)] leading-[0.95] font-semibold">
               {service.title}
             </h1>
           </Reveal>
@@ -108,6 +120,9 @@ function ServiceDetail() {
                   className="group flex h-full flex-col justify-between bg-background p-7 transition-colors hover:bg-surface"
                 >
                   <div>
+                    <span className="mb-2 block font-mono text-[10px] tracking-widest text-primary uppercase">
+                      {s.category}
+                    </span>
                     <h3 className="font-display text-lg font-semibold">{s.title}</h3>
                     <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
                       {s.short}
@@ -128,3 +143,4 @@ function ServiceDetail() {
     </>
   );
 }
+

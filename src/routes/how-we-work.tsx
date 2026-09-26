@@ -10,16 +10,16 @@ export const Route = createFileRoute("/how-we-work")({
 
 function HowWeWork() {
   usePageMeta(
-    "How We Work",
-    "Our delivery process, from discovery and planning through design, development, testing, launch and ongoing support.",
+    "How We Work — IT & Telecom Delivery Process",
+    "Our 7-stage engineering and deployment process for custom software, SaaS products, VoIP systems, enterprise networks, and fiber infrastructure.",
   );
 
   return (
     <>
       <PageHero
-        eyebrow="How We Work"
-        title="A structured process, without the paperwork it usually implies."
-        lead="Seven stages keep every engagement predictable — from the first conversation to what happens after launch."
+        eyebrow="Delivery Process"
+        title="A structured process for software engineering & telecom deployment."
+        lead="Seven stages keep every engagement predictable — from initial audit and architecture planning through installation, testing, launch, and 24/7 managed care."
       />
 
       <section className="container-x py-16 md:py-24">
@@ -44,8 +44,9 @@ function HowWeWork() {
 
       <CtaBand
         title="Ready to Start Discovery?"
-        body="The first step costs nothing but a conversation. Tell us where things stand today."
+        body="The first step costs nothing but a conversation. Tell us about your software or telecom needs."
       />
     </>
   );
 }
+

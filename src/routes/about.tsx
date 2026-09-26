@@ -10,15 +10,15 @@ export const Route = createFileRoute("/about")({
 
 function About() {
   usePageMeta(
-    "About",
-    "VSMART TECH SOLUTIONS LLC is a Wyoming-registered software and technology company building custom software, SaaS, AI and automation.",
+    "About Us — IT & Telecom Engineering Partner",
+    "VSMART TECH SOLUTIONS LLC is a Wyoming-registered technology firm delivering custom software, AI automation, high-speed business internet, cloud VoIP phone systems, and telecom infrastructure.",
   );
 
   return (
     <>
       <PageHero
         eyebrow="About Us"
-        title="A technology partner that starts with your business, not a template."
+        title="A unified IT & Telecommunications partner for growth-focused businesses."
         lead={COMPANY_DESCRIPTION}
       />
 
@@ -30,21 +30,19 @@ function About() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 text-[clamp(2rem,4vw,3.2rem)] leading-[1.02] font-semibold">
-                Practical software, built by people who ask why first.
+                Practical software and resilient communications infrastructure.
               </h2>
             </Reveal>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <Reveal delay={120}>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                {SERVICE_STATEMENT} We work as an embedded technical partner rather than an outside
-                vendor — learning how a business runs before proposing what to build.
+                {SERVICE_STATEMENT} We work as an embedded technology partner rather than an outside vendor — learning how your business operates before engineering custom software or deploying telecom links.
               </p>
             </Reveal>
             <Reveal delay={180}>
               <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                Our team combines software engineering, product thinking and applied AI to deliver
-                systems that hold up in daily use, not just in a demo.
+                Our multidisciplinary team combines custom web application development, AI workflow automation, enterprise fiber networking, and cloud VoIP phone architectures into a single dependable ecosystem.
               </p>
             </Reveal>
             <Reveal delay={220}>
@@ -72,7 +70,7 @@ function About() {
           </Reveal>
           <Reveal delay={70}>
             <h2 className="mt-6 max-w-2xl text-[clamp(2rem,4vw,3.2rem)] leading-[1.02] font-semibold">
-              Values that shape how we work, not just what we say.
+              Values that shape how we engineer software and build telecommunications networks.
             </h2>
           </Reveal>
 
@@ -96,3 +94,4 @@ function About() {
     </>
   );
 }
+

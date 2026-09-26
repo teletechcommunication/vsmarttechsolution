@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
 function Home() {
   const parallax = useParallax(0.06);
   usePageMeta(
-    "VSMART TECH SOLUTIONS LLC — Build. Automate. Scale.",
-    "Software and intelligent automation built around your business. Custom software, SaaS, AI solutions, automation and integrations from VSMART TECH SOLUTIONS LLC.",
+    "VSMART TECH SOLUTIONS LLC — IT Development & Enterprise Telecom",
+    "Custom software, SaaS, AI solutions, automation, business internet, VoIP phone systems, network connectivity and telecom infrastructure from VSMART TECH SOLUTIONS LLC.",
   );
 
   return (
@@ -52,7 +52,7 @@ function Home() {
               className="font-mono text-[11px] whitespace-nowrap text-muted-foreground uppercase"
               style={{ writingMode: "vertical-rl" }}
             >
-              Software — Automation — AI
+              Software — Telecom — Automation — AI
             </span>
             <span className="h-full w-px flex-1 bg-border" aria-hidden />
           </div>
@@ -62,7 +62,7 @@ function Home() {
               <span className="inline-flex items-center gap-2.5 border border-border bg-card px-4 py-1.5">
                 <span className="size-1.5 rounded-full bg-primary" aria-hidden />
                 <span className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground uppercase">
-                  Wyoming-Registered · Est. Technology Partner
+                  Wyoming-Registered · IT & Telecom Partner
                 </span>
               </span>
             </Reveal>
@@ -72,7 +72,7 @@ function Home() {
                 We help businesses
                 <br />
                 <RotatingText
-                  texts={["build.", "automate.", "scale.", "modernize."]}
+                  texts={["build.", "connect.", "automate.", "scale."]}
                   mainClassName="mt-1 inline-flex overflow-hidden text-primary"
                   staggerFrom="last"
                   initial={{ y: "100%" }}
@@ -88,9 +88,8 @@ function Home() {
 
             <Reveal delay={260}>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-                VSMART TECH SOLUTIONS LLC designs custom applications, SaaS products, AI-powered
-                features and automated workflows built around the way your business already
-                operates.
+                VSMART TECH SOLUTIONS LLC delivers custom software development, AI solutions, high-speed
+                business internet, VoIP cloud phone systems, and enterprise telecom infrastructure tailored around how your organization operates.
               </p>
             </Reveal>
 
@@ -124,7 +123,7 @@ function Home() {
                 <div className="relative aspect-4/5 overflow-hidden bg-surface-2">
                   <img
                     src={heroImg}
-                    alt="Abstract cinematic visual of server hardware and flowing light representing modern software infrastructure"
+                    alt="Abstract cinematic visual of server hardware and flowing light representing modern software and telecom infrastructure"
                     width={1200}
                     height={1500}
                     className="size-full object-cover"
@@ -132,21 +131,24 @@ function Home() {
                 </div>
                 <div className="animate-float absolute -bottom-9 left-1/2 w-[calc(100%-1rem)] -translate-x-1/2 border border-border bg-card p-5 shadow-[var(--shadow-lift)]">
                   <p className="font-mono text-[10px] tracking-[0.18em] text-muted-foreground uppercase">
-                    Automated workflow
+                    Integrated IT & Telecom
                   </p>
                   <div className="mt-3 space-y-2">
-                    {["Request received", "Data validated", "Record created", "Team notified"].map(
-                      (s, i) => (
-                        <div key={s} className="flex items-center gap-2.5 text-xs">
-                          <span
-                            className="size-1.5 bg-primary"
-                            style={{ opacity: 1 - i * 0.18 }}
-                            aria-hidden
-                          />
-                          <span className="text-muted-foreground">{s}</span>
-                        </div>
-                      ),
-                    )}
+                    {[
+                      "Dedicated Fiber & VoIP Active",
+                      "Cloud Infrastructure Synced",
+                      "Automated Workflow Operational",
+                      "Zero Trust Security Active",
+                    ].map((s, i) => (
+                      <div key={s} className="flex items-center gap-2.5 text-xs">
+                        <span
+                          className="size-1.5 bg-primary"
+                          style={{ opacity: 1 - i * 0.18 }}
+                          aria-hidden
+                        />
+                        <span className="text-muted-foreground">{s}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -156,7 +158,7 @@ function Home() {
 
         <div className="container-x relative mt-24 grid grid-cols-3 divide-x divide-border border-y border-border">
           {[
-            ["8", "Core services"],
+            ["14", "Core services"],
             ["7", "Stage delivery process"],
             ["WY", "Registered, US-based"],
           ].map(([stat, label]) => (
@@ -191,25 +193,23 @@ function Home() {
             </Reveal>
             <Reveal delay={80}>
               <h2 className="mt-6 text-[clamp(2rem,4vw,3.2rem)] leading-[1.02] font-semibold">
-                Most businesses do not need more software. They need the right software.
+                Unified IT Development & Telecommunications Infrastructure.
               </h2>
             </Reveal>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <Reveal delay={120}>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Generic tools force teams to work around limitations. We start with how your
-                business actually runs — the processes, the handoffs, the data — and build systems
-                that support that work instead of interrupting it.
+                Fragmented vendors create friction. We bridge the gap between software development and telecommunication networks — building custom applications while managing your voice, business internet, and connectivity backbone.
               </p>
             </Reveal>
             <Reveal delay={180}>
               <div className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2">
                 {[
-                  ["Process first", "Requirements come from your operations, not a template."],
-                  ["Built to last", "Maintainable code, documented decisions, clear ownership."],
-                  ["Measured value", "Every feature ties back to a business outcome."],
-                  ["Room to grow", "Architecture that holds up as volume increases."],
+                  ["Process First", "Requirements derived from your operational workflows."],
+                  ["Unified Stack", "Seamless integration between software, VoIP, and internet access."],
+                  ["High Reliability", "99.999% SLA-backed connectivity and resilient code."],
+                  ["Room to Scale", "Infrastructure engineered to expand as your team grows."],
                 ].map(([t, b]) => (
                   <div key={t} className="bg-background p-6">
                     <h3 className="font-display text-base font-semibold">{t}</h3>
@@ -232,7 +232,7 @@ function Home() {
               </Reveal>
               <Reveal delay={60}>
                 <h2 className="mt-6 text-[clamp(2rem,4vw,3.2rem)] leading-[1.02] font-semibold">
-                  Eight core services, one delivery standard.
+                  14 core IT & Telecom services, one delivery standard.
                 </h2>
               </Reveal>
             </div>
@@ -249,7 +249,7 @@ function Home() {
 
           <div className="mt-14 border-t border-border">
             {SERVICES.map((s, i) => (
-              <Reveal key={s.slug} delay={i * 40}>
+              <Reveal key={s.slug} delay={i * 30}>
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
@@ -258,9 +258,14 @@ function Home() {
                   <span className="col-span-2 font-mono text-xs text-muted-foreground md:col-span-1">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="col-span-10 font-display text-xl font-semibold tracking-tight transition-transform duration-500 group-hover:translate-x-1.5 md:col-span-4 md:text-2xl">
-                    {s.title}
-                  </h3>
+                  <div className="col-span-10 md:col-span-4">
+                    <span className="mb-1 block font-mono text-[10px] tracking-widest text-primary uppercase">
+                      {s.category}
+                    </span>
+                    <h3 className="font-display text-xl font-semibold tracking-tight transition-transform duration-500 group-hover:translate-x-1.5 md:text-2xl">
+                      {s.title}
+                    </h3>
+                  </div>
                   <p className="col-span-12 text-sm leading-relaxed text-muted-foreground md:col-span-6">
                     {s.short}
                   </p>
@@ -281,7 +286,7 @@ function Home() {
             <div ref={parallax} className="relative aspect-5/4 overflow-hidden bg-surface-2">
               <img
                 src={automationImg}
-                alt="Minimal render of connected nodes representing an automated business workflow"
+                alt="Minimal render of connected nodes representing an automated business workflow and telecom network"
                 loading="lazy"
                 width={1408}
                 height={1008}
@@ -300,18 +305,17 @@ function Home() {
             </Reveal>
             <Reveal delay={130}>
               <p className="mt-6 leading-relaxed text-muted-foreground">
-                We do not add technology for its own sake. Automation is introduced where repetitive
-                work is costing time. AI is applied where it removes manual reading, sorting or
-                drafting. Integrations are built where data is being re-entered by hand.
+                We do not add technology for its own sake. Dedicated fiber and VoIP are introduced to eliminate outages and poor voice calls. Automation is implemented where repetitive work wastes time. AI is applied where it removes manual sorting or drafting.
               </p>
             </Reveal>
             <Reveal delay={190}>
               <ul className="mt-9 space-y-4">
                 {[
+                  "Uninterrupted business internet with automated failover",
+                  "HD Cloud VoIP and unified voice/video communications",
                   "Less manual work across daily operations",
                   "Fewer errors from duplicated data entry",
-                  "Clearer reporting for faster decisions",
-                  "Systems that scale without being rebuilt",
+                  "Infrastructure that scales reliably without rework",
                 ].map((item) => (
                   <li key={item} className="flex gap-4 border-t border-border pt-4 text-sm">
                     <span className="mt-1.5 size-1.5 shrink-0 bg-primary" aria-hidden />
@@ -334,13 +338,12 @@ function Home() {
               </Reveal>
               <Reveal delay={70}>
                 <h2 className="mt-6 text-[clamp(2rem,4vw,3.1rem)] leading-[1.02] font-semibold">
-                  Sectors we can support.
+                  Sectors we support.
                 </h2>
               </Reveal>
               <Reveal delay={130}>
                 <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                  These are areas where our services apply directly. Each engagement starts from
-                  your own processes and requirements.
+                  Our IT development and enterprise telecom solutions are configured specifically for your industry's connectivity and operational demands.
                 </p>
               </Reveal>
               <Reveal delay={190}>
@@ -381,17 +384,16 @@ function Home() {
       <section className="container-x py-24 md:py-32">
         <div className="max-w-2xl">
           <Reveal>
-            <Eyebrow>What We Can Build</Eyebrow>
+            <Eyebrow>What We Build & Deploy</Eyebrow>
           </Reveal>
           <Reveal delay={70}>
             <h2 className="mt-6 text-[clamp(2rem,4vw,3.2rem)] leading-[1.02] font-semibold">
-              Solution examples, not client work.
+              Solution examples across IT and Telecommunications.
             </h2>
           </Reveal>
           <Reveal delay={130}>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              The following are conceptual examples of systems we can develop. They illustrate the
-              type of work we do and are not presented as previous client projects.
+              The following examples illustrate our core capabilities across software development, VoIP migration, enterprise fiber networking, and AI automation.
             </p>
           </Reveal>
         </div>
@@ -430,7 +432,7 @@ function Home() {
             <div className="aspect-16/10 overflow-hidden bg-surface-2">
               <img
                 src={aiImg}
-                alt="Translucent lattice sphere with blue inner glow representing applied AI"
+                alt="Translucent lattice sphere with blue inner glow representing applied AI and network intelligence"
                 loading="lazy"
                 width={1408}
                 height={1008}
@@ -442,7 +444,7 @@ function Home() {
             <div className="aspect-16/10 overflow-hidden bg-surface-2">
               <img
                 src={integrationsImg}
-                alt="Precision modules connected by glowing lines representing API and system integrations"
+                alt="Precision modules connected by glowing lines representing telecom and API system integrations"
                 loading="lazy"
                 width={1408}
                 height={1008}
@@ -457,3 +459,4 @@ function Home() {
     </>
   );
 }
+

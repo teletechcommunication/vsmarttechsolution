@@ -2,11 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { ADDRESS_LINES, COMPANY_DESCRIPTION, SERVICES, SERVICE_STATEMENT } from "@/lib/site";
 
 export function Footer() {
+  const telecomServices = SERVICES.filter((s) => s.category === "Telecom Services");
+  const itServices = SERVICES.filter((s) => s.category === "IT Services");
+
   return (
     <footer className="border-t border-border bg-ink text-ink-foreground">
       <div className="container-x py-16 md:py-20">
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5">
               <span className="font-display text-sm font-bold tracking-tight uppercase">
                 VSMART Tech Solutions LLC
@@ -29,10 +32,29 @@ export function Footer() {
 
           <div className="lg:col-span-3">
             <h3 className="font-mono text-[11px] tracking-[0.18em] text-ink-foreground/45 uppercase">
-              Services
+              Telecom Services
             </h3>
-            <ul className="mt-5 space-y-3 text-sm">
-              {SERVICES.map((s) => (
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {telecomServices.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
+                    className="text-ink-foreground/70 transition-colors hover:text-ink-foreground"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3">
+            <h3 className="font-mono text-[11px] tracking-[0.18em] text-ink-foreground/45 uppercase">
+              IT Services
+            </h3>
+            <ul className="mt-5 space-y-2.5 text-sm">
+              {itServices.map((s) => (
                 <li key={s.slug}>
                   <Link
                     to="/services/$slug"
@@ -48,9 +70,9 @@ export function Footer() {
 
           <div className="lg:col-span-2">
             <h3 className="font-mono text-[11px] tracking-[0.18em] text-ink-foreground/45 uppercase">
-              Company
+              Company & Legal
             </h3>
-            <ul className="mt-5 space-y-3 text-sm">
+            <ul className="mt-5 space-y-2.5 text-sm">
               {[
                 { to: "/about", label: "About" },
                 { to: "/services", label: "Services" },
@@ -58,25 +80,6 @@ export function Footer() {
                 { to: "/how-we-work", label: "How We Work" },
                 { to: "/faqs", label: "FAQs" },
                 { to: "/contact", label: "Contact" },
-              ].map((l) => (
-                <li key={l.to}>
-                  <Link
-                    to={l.to}
-                    className="text-ink-foreground/70 transition-colors hover:text-ink-foreground"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h3 className="font-mono text-[11px] tracking-[0.18em] text-ink-foreground/45 uppercase">
-              Legal
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm">
-              {[
                 { to: "/privacy-policy", label: "Privacy Policy" },
                 { to: "/terms-of-service", label: "Terms of Service" },
                 { to: "/cookie-policy", label: "Cookie Policy" },
@@ -102,3 +105,4 @@ export function Footer() {
     </footer>
   );
 }
+

@@ -16,8 +16,8 @@ export const Route = createFileRoute("/faqs")({
 
 function Faqs() {
   usePageMeta(
-    "FAQs",
-    "Answers to common questions about our services, process, pricing and support.",
+    "FAQs — IT & Telecom Solutions",
+    "Answers to common questions about custom software, SaaS, AI solutions, Business Internet, VoIP phone systems, network cabling, and ongoing support.",
   );
 
   return (

@@ -28,6 +28,7 @@ const enquirySchema = z.object({
   name: z.string().trim().min(2, "Enter your full name."),
   email: z.string().trim().email("Enter a valid email address."),
   company: z.string().trim().optional(),
+  serviceType: z.string().optional(),
   budget: z.string().trim().optional(),
   message: z
     .string()
@@ -40,19 +41,19 @@ type EnquiryValues = z.infer<typeof enquirySchema>;
 
 function Contact() {
   usePageMeta(
-    "Contact",
-    "Send VSMART TECH SOLUTIONS LLC a project enquiry. We respond with a practical view of how it can be built.",
+    "Contact Us — VSMART TECH SOLUTIONS LLC",
+    "Send VSMART TECH SOLUTIONS LLC an enquiry for custom software, SaaS, AI, VoIP, business internet, or telecom infrastructure.",
   );
 
   const form = useForm<EnquiryValues>({
     resolver: zodResolver(enquirySchema),
-    defaultValues: { name: "", email: "", company: "", budget: "", message: "" },
+    defaultValues: { name: "", email: "", company: "", serviceType: "both", budget: "", message: "" },
   });
 
   function onSubmit(values: EnquiryValues) {
     console.info("Project enquiry submitted", values);
     toast.success("Enquiry sent", {
-      description: "Thanks — we'll review this and get back to you shortly.",
+      description: "Thanks — we'll review your software / telecom requirements and reply shortly.",
     });
     form.reset();
   }
@@ -60,9 +61,9 @@ function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="Contact"
-        title="Tell us what you're trying to build."
-        lead="Send a short description of the project or problem. We review every enquiry and reply with a practical next step."
+        eyebrow="Contact Us"
+        title="Tell us about your software or telecom needs."
+        lead="Send a short description of your project, software goals, or telecommunications setup. We review every enquiry and reply with a practical roadmap."
       />
 
       <section className="container-x py-16 md:py-24">
@@ -143,11 +144,11 @@ function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Project description</FormLabel>
+                        <FormLabel>Project & Service details</FormLabel>
                         <FormControl>
                           <Textarea
                             rows={7}
-                            placeholder="What are you trying to build, automate or fix?"
+                            placeholder="Tell us what software, AI automation, VoIP phone system, business internet, or network cabling you need..."
                             {...field}
                           />
                         </FormControl>
@@ -176,8 +177,7 @@ function Contact() {
                 ))}
               </address>
               <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-                Registered in Wyoming, United States. We work with businesses locally and
-                internationally, and respond to every enquiry.
+                Registered in Wyoming, United States. Providing end-to-end IT development and enterprise telecom solutions locally and internationally.
               </p>
             </Reveal>
           </div>
@@ -186,3 +186,4 @@ function Contact() {
     </>
   );
 }
+

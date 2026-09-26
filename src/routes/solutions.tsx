@@ -10,16 +10,16 @@ export const Route = createFileRoute("/solutions")({
 
 function Solutions() {
   usePageMeta(
-    "Solutions",
-    "Solutions for reducing repetitive work, developing digital products, connecting systems and applying AI to real business problems.",
+    "Solutions — IT & Telecom Outcomes",
+    "Tailored IT and Telecom solutions: Business Internet deployment, Cloud VoIP migration, enterprise networks, custom software, AI automation, and system connectivity.",
   );
 
   return (
     <>
       <PageHero
-        eyebrow="Solutions"
-        title="Solutions organised around outcomes, not technology."
-        lead="These are the problems businesses bring to us most often. Each one can be addressed through a mix of custom software, automation, AI and integrations."
+        eyebrow="Targeted Solutions"
+        title="Solutions organized around outcomes, not technology."
+        lead="These are the operational and communications challenges businesses bring to us most often. Each is solved through custom software, AI automation, high-speed fiber internet, and cloud voice systems."
       />
 
       <section className="container-x py-16 md:py-24">
@@ -27,9 +27,14 @@ function Solutions() {
           {OUTCOMES.map((o, i) => (
             <Reveal key={o.title} delay={i * 40}>
               <div className="h-full bg-background p-8">
-                <span className="font-mono text-[10px] tracking-[0.18em] text-primary uppercase">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="font-mono text-[10px] tracking-[0.18em] text-primary uppercase">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="border border-border px-2 py-0.5 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
+                    {o.category}
+                  </span>
+                </div>
                 <h2 className="mt-4 font-display text-xl font-semibold">{o.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{o.body}</p>
               </div>
@@ -62,9 +67,10 @@ function Solutions() {
       </section>
 
       <CtaBand
-        title="Have a Problem in Mind?"
-        body="Describe what's slowing your team down or what you're trying to build. We'll tell you plainly how it could be solved."
+        title="Have a Software or Telecom Challenge in Mind?"
+        body="Describe what's slowing your team down, your voice/network needs, or what you're trying to build. We'll tell you plainly how it can be solved."
       />
     </>
   );
 }
+
